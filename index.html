@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>陶赞 | IoT Engineer</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#0f1117;
+      color:#ffffff;
+      font-family: "Segoe UI", "PingFang SC", sans-serif;
+      line-height:1.7;
+    }
+
+    a{
+      color:#7cc7ff;
+      text-decoration:none;
+    }
+
+    .container{
+      width:90%;
+      max-width:1100px;
+      margin:auto;
+    }
+
+    header{
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      overflow:hidden;
+      background:
+      radial-gradient(circle at top left,#1f3b73 0%,transparent 30%),
+      radial-gradient(circle at bottom right,#0b7fab 0%,transparent 30%),
+      #0f1117;
+    }
+
+    .hero{
+      text-align:center;
+      z-index:2;
+    }
+
+    .hero h1{
+      font-size:72px;
+      font-weight:700;
+      letter-spacing:3px;
+      margin-bottom:15px;
+    }
+
+    .hero h2{
+      font-size:24px;
+      color:#b9c6d3;
+      font-weight:400;
+      margin-bottom:30px;
+    }
+
+    .hero p{
+      max-width:700px;
+      margin:auto;
+      color:#9aa8b5;
+      font-size:18px;
+    }
+
+    .button-group{
+      margin-top:40px;
+      display:flex;
+      gap:20px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:14px 32px;
+      border-radius:10px;
+      background:#1f6feb;
+      transition:0.3s;
+      font-weight:600;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+      background:#2b82ff;
+    }
+
+    .btn-outline{
+      background:transparent;
+      border:1px solid #3c4d63;
+    }
+
+    section{
+      padding:100px 0;
+    }
+
+    .section-title{
+      font-size:40px;
+      margin-bottom:50px;
+      text-align:center;
+    }
+
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .about-text{
+      color:#b9c6d3;
+      font-size:17px;
+    }
+
+    .card-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#171b24;
+      padding:30px;
+      border-radius:18px;
+      border:1px solid #232b39;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:#3c7eff;
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      font-size:22px;
+    }
+
+    .card p{
+      color:#aeb9c5;
+      font-size:15px;
+    }
+
+    .project{
+      background:#171b24;
+      padding:35px;
+      border-radius:20px;
+      margin-bottom:30px;
+      border:1px solid #232b39;
+    }
+
+    .project h3{
+      margin-bottom:15px;
+      font-size:28px;
+    }
+
+    .project p{
+      color:#b3bfcc;
+    }
+
+    .skill-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+      margin-top:25px;
+    }
+
+    .skill{
+      background:#1e2633;
+      padding:10px 18px;
+      border-radius:30px;
+      color:#cbd5df;
+      font-size:14px;
+    }
+
+    footer{
+      padding:50px 0;
+      text-align:center;
+      border-top:1px solid #222a38;
+      color:#91a0af;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:48px;
+      }
+
+      .hero h2{
+        font-size:20px;
+      }
+
+      .about{
+        grid-template-columns:1fr;
+      }
+
+      .section-title{
+        font-size:32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="hero container">
+      <h1>陶赞</h1>
+
+      <h2>IoT Engineering Student · Java Developer · Embedded Enthusiast</h2>
+
+      <p>
+        物联网工程技术本科生，专注于 IoT 系统开发、嵌入式开发与 Web 管理系统。
+        熟悉 Java、ESP32、Arduino、MySQL 与 MQTT 协议，
+        对智能硬件与未来科技充满热情。
+      </p>
+
+      <div class="button-group">
+        <a href="https://github.com/luoming-lot" class="btn" target="_blank">
+          GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/luoming-lot" class="btn btn-outline" target="_blank">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+
+      <h2 class="section-title">About Me</h2>
+
+      <div class="about">
+
+        <div class="about-text">
+          <p>
+            我目前就读于重庆机电职业技术大学物联网工程技术专业，
+            具备扎实的 Java、C/C++ 与 Web 开发基础，
+            熟悉 ESP32、Arduino、Raspberry Pi 等开发平台。
+          </p>
+
+          <br>
+
+          <p>
+            在项目中，我参与了 IoT Web 管理系统开发，
+            实现了温湿度监控、MQTT 数据上传与设备管理等功能。
+            同时也熟悉 Excel、PowerPoint、WPS Office 等办公软件，
+            具备良好的团队协作与学习能力。
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Education</h3>
+
+          <p>
+            重庆机电职业技术大学<br>
+            物联网工程技术 · 本科<br>
+            2023 - 2027
+          </p>
+
+          <br>
+
+          <h3>Certificate</h3>
+
+          <p>
+            全国计算机等级考试二级<br>
+            MS Office / WPS Office<br>
+            CET-4
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">Skills</h2>
+
+      <div class="card-grid">
+
+        <div class="card">
+          <h3>Programming</h3>
+
+          <p>
+            Java · C/C++ · HTML · CSS · JavaScript
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>IoT Development</h3>
+
+          <p>
+            ESP32 · Arduino · Raspberry Pi · MQTT · HTTP
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Database</h3>
+
+          <p>
+            MySQL · Data Management · Web Backend
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Office & Design</h3>
+
+          <p>
+            Excel · PowerPoint · Word · WPS Office · C4D
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project">
+
+        <h3>IoT Web Management System</h3>
+
+        <p>
+          与团队协作完成物联网 Web 管理系统开发，
+          负责前端页面开发及温湿度数据接口对接。
+          基于 MQTT 协议实现传感器数据实时上传与远程监控，
+          使用 MySQL 完成设备数据存储与管理。
+        </p>
+
+        <div class="skill-list">
+          <div class="skill">Java</div>
+          <div class="skill">MQTT</div>
+          <div class="skill">ESP32</div>
+          <div class="skill">MySQL</div>
+          <div class="skill">IoT</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">Contact</h2>
+
+      <div class="card">
+
+        <p>
+          📧 Email：2847455825@qq.com
+        </p>
+
+        <br>
+
+        <p>
+          📱 Phone：13032334599
+        </p>
+
+        <br>
+
+        <p>
+          💻 GitHub：
+          <a href="https://github.com/luoming-lot" target="_blank">
+            github.com/luoming-lot
+          </a>
+        </p>
+
+        <br>
+
+        <p>
+          🔗 LinkedIn：
+          <a href="https://www.linkedin.com/in/luoming-lot" target="_blank">
+            linkedin.com/in/luoming-lot
+          </a>
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Tao Zan · Personal Portfolio Website
+  </footer>
+
+</body>
+</html>
